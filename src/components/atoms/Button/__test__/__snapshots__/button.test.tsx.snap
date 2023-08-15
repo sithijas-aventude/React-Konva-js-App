@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Button - Secondary 1`] = `
+<button
+  className="btn-base  btn-red "
+>
+  <i
+    className="ri-admin-line"
+  />
+  <span
+    className="text "
+  >
+    Secondary
+  </span>
+</button>
+`;
+
+exports[`renders Button - dropDown 1`] = `
+<button
+  className="btn-base   btn-drop-down"
+>
+  <span
+    className=" drop-dwon-text"
+  >
+    Button text
+  </span>
+  <i
+    className="ri-arrow-down-s-line drop-dwon-icon"
+  />
+</button>
+`;
+
+exports[`renders Button 1`] = `
+<button
+  className="btn-base   "
+>
+  <i
+    className="ri-admin-line"
+  />
+  <span
+    className="text "
+  >
+    Button
+  </span>
+</button>
+`;

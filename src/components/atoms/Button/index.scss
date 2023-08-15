@@ -1,0 +1,411 @@
+@import '../../../styles/colors';
+@import '../../../styles/shadow';
+@import '../../../styles/text';
+
+.btn {
+  @extend .shadow-sm;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 17px;
+  background: $beige-400;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: $brand-midnight;
+
+  .drop-dwon-text {
+    padding: 9px 17px;
+    border-right: 1px solid $beige-500;
+  }
+
+  .drop-dwon-icon {
+    font-size: 22px;
+    margin: 5px;
+  }
+
+  &:hover {
+    color: $gray-900;
+    background-color: $beige-500;
+
+    .drop-dwon-text {
+      border-color: $beige-700;
+    }
+  }
+
+  &:focus {
+    box-sizing: border-box;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 0px 0px 2px $white,
+      0px 0px 0px 4px $focus;
+    border-radius: 6px;
+  }
+}
+
+.btn-base i {
+  font-size: 20px;
+}
+
+.btn-drop-down {
+  padding: 0 !important;
+}
+
+.btn-small {
+  @extend .btn;
+  @extend .extra-small-medium;
+
+  .text {
+    margin-left: 5px;
+  }
+
+  .icon-right-text {
+    margin-right: 5px;
+  }
+
+  .button-icon {
+    width: 13.34px;
+    height: 13.34px;
+  }
+}
+
+.btn-small.btn-icon {
+  padding: 7px;
+  width: 30px;
+  height: 30px;
+}
+
+.btn-base {
+  @extend .btn;
+  @extend .small-medium;
+
+  .text {
+    margin-left: 8px;
+  }
+
+  .icon-right-text {
+    margin-right: 8px;
+  }
+}
+
+.btn-base.btn-icon {
+  padding: 9px;
+  width: 38px;
+  height: 38px;
+}
+
+.btn-lg {
+  @extend .btn;
+  @extend .base-medium;
+
+  .text {
+    margin-left: 10px;
+  }
+
+  .icon-right-text {
+    margin-right: 10px;
+  }
+}
+
+.btn-lg.btn-icon {
+  padding: 11px;
+  width: 42px;
+  height: 42px;
+}
+
+.btn-xl {
+  @extend .btn;
+  @extend .base-medium;
+  padding: 13px 25px;
+
+  .text {
+    margin-left: 10px;
+  }
+
+  .icon-right-text {
+    margin-right: 10px;
+  }
+
+  .drop-dwon-text {
+    padding: 13px 25px;
+  }
+}
+
+.btn-xl.btn-icon {
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.button-loading {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+
+  .button-loading-inner {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+
+  .button-loading-inner:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .button-loading-inner:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .button-loading-inner:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.btn-link {
+  .button-loading {
+    .button-loading-inner {
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      border: 2px solid $blue-600;
+      border-color: $blue-600 transparent transparent transparent;
+    }
+  }
+}
+
+.btn-link:disabled {
+  color: $gray-500;
+}
+
+.btn-white {
+  background-color: $white;
+  border: solid 1px $gray-300;
+
+  .button-loading-inner {
+    border: 2px solid $gray-300;
+    border-color: $gray-300 transparent transparent transparent;
+  }
+
+  &:hover {
+    background-color: $gray-50;
+  }
+}
+
+.btn-red {
+  background-color: $white;
+  border: solid 1px $gray-300;
+  color: $red-700;
+
+  .button-loading-inner {
+    border: 2px solid $gray-300;
+    border-color: $gray-300 transparent transparent transparent;
+  }
+
+  &:hover {
+    color: $red-700;
+    background-color: $gray-50;
+  }
+
+  &:focus {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 0px 0px 2px $white,
+      0px 0px 0px 4px $red-700;
+  }
+}
+
+.btn-icon {
+  background-color: $white;
+  border: solid 1px $gray-300;
+  color: $brand-midnight;
+
+  &:hover {
+    color: $brand-midnight;
+    background-color: $gray-50;
+  }
+}
+
+.btn-text {
+  background-color: transparent;
+  border: none;
+  color: $brand-midnight;
+  box-shadow: none;
+  padding: 0px;
+
+  &:hover {
+    color: $brand-midnight;
+    background-color: transparent;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-link {
+  background-color: transparent;
+  border: none;
+  color: $brand-midnight;
+  box-shadow: none;
+  padding: 5px;
+  color: $blue-600;
+
+  &:hover {
+    color: $brand-midnight;
+    background-color: transparent;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-icon-link {
+  background-color: transparent;
+  border: none;
+  color: $brand-midnight;
+  box-shadow: none;
+  padding: 5px;
+  color: $blue-600;
+
+  &:hover {
+    color: $brand-midnight;
+    background-color: transparent;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-disabled {
+  color: $gray-400;
+  background-color: $gray-100;
+  cursor: not-allowed;
+
+  &:hover {
+    color: $gray-400;
+    background-color: $gray-200;
+  }
+
+  &:focus {
+    border: none;
+  }
+}
+
+.btn-disabled.btn-link,
+.btn-disabled.btn-icon-link {
+  background-color: transparent;
+}
+
+.btton-group {
+  display: flex;
+
+  .btn-base:nth-child(1) {
+    border-top-right-radius: unset !important;
+    border-bottom-right-radius: unset !important;
+  }
+
+  .btn-base:nth-child(2) {
+    border-radius: unset !important;
+  }
+
+  .btn-base:nth-child(3) {
+    border-top-left-radius: unset !important;
+    border-bottom-left-radius: unset !important;
+  }
+}
+
+.floating-action-button-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.floating-action-button-default {
+  i {
+    color: $icon-background;
+    font-size: 24px;
+  }
+
+  &:hover {
+    background-color: $gray-200;
+  }
+
+  &:focus {
+    background-color: $gray-300;
+  }
+}
+
+.floating-action-button-primary {
+  background-color: $beige-400;
+
+  i {
+    color: $icon-background;
+    font-size: 24px;
+  }
+
+  &:hover {
+    background-color: $beige-500;
+  }
+
+  &:focus {
+    background-color: $beige-500;
+  }
+}
+
+.floating-action-button-darken {
+  background-color: $gray-900;
+
+  i {
+    color: $white;
+    font-size: 24px;
+  }
+
+  &:hover {
+    background-color: $gray-600;
+  }
+
+  &:focus {
+    background-color: $gray-900;
+  }
+}
+
+.floating-action-button-disabled {
+  background-color: $gray-200 !important;
+  cursor: not-allowed !important;
+
+  i {
+    color: $gray-400 !important;
+  }
+}
+
+.floating-action-button-md {
+  @extend .floating-action-button-sm;
+
+  width: 46px;
+  height: 46px;
+}
+
+.floating-action-button-lg {
+  @extend .floating-action-button-sm;
+
+  width: 52px;
+  height: 52px;
+}
